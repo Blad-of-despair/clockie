@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#232526">
+</head>
+<body>
+    <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen"></button>
+    <div class="container">
+        <div class="card1 box">
+            <div class="hour">
+                <h1 class="hour-text">01</h1>
+            </div>
+        </div>
+        <div class="card2 box ">
+            <div class="min">
+                <h1 class="minute-text">32</h1>
+            </div>
+        </div>
+        <div class="ampm">
+            <span class="ampm-text">AM</span>
+        </div>
+    </div>
+    <script src="clock.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+</body>
+</html>
